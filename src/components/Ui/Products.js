@@ -21,6 +21,7 @@ const Product = () => {
       description={prod.description}
       price={prod.price}
       title={prod.title}
+      category={prod.category}
     />
   ));
 };
