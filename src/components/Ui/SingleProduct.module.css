@@ -1,0 +1,15 @@
+.prodContainer {
+  display: flex;
+  justify-content: center;
+  flex-wrap: wrap;
+}
+
+.prodCard {
+  width: 300px;
+  margin: 1rem;
+  border: 3px;
+}
+
+img {
+  width: 100%;
+}

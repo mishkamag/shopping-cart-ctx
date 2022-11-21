@@ -1,5 +1,5 @@
 import { useEffect, useState } from "react";
-import classes from "./Products.module.css";
+import SingleProduct from "./SingleProduct";
 
 const Product = () => {
   const [productsArr, setProductsArr] = useState([]);
@@ -9,17 +9,20 @@ const Product = () => {
       .then((res) => res.json())
       .then((data) => {
         setProductsArr(data);
-        console.log(productsArr);
       });
   }, []);
+  console.log(productsArr);
 
-  return (
-    <div className={classes.prodContainer}>
-      {productsArr.map((prod) => (
-        <Product />
-      ))}
-    </div>
-  );
+  return productsArr.map((prod) => (
+    <SingleProduct
+      key={prod.id}
+      id={prod.id}
+      img={prod.image}
+      description={prod.description}
+      price={prod.price}
+      title={prod.title}
+    />
+  ));
 };
 
 export default Product;
