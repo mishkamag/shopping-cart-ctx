@@ -1,7 +1,11 @@
-import React from "react";
+import Products from "../Ui/Products";
 
 const Home = () => {
-  return <div>Home</div>;
+  return (
+    <div>
+      <Products />
+    </div>
+  );
 };
 
 export default Home;
