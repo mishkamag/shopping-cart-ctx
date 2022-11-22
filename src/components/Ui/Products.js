@@ -11,17 +11,16 @@ const Product = () => {
         setProductsArr(data);
       });
   }, []);
-  console.log(productsArr);
 
   return productsArr.map((prod) => (
     <SingleProduct
       key={prod.id}
       id={prod.id}
       img={prod.image}
-      description={prod.description}
+      // description={prod.description}
       price={prod.price}
       title={prod.title}
-      category={prod.category}
+      // category={prod.category}
     />
   ));
 };
