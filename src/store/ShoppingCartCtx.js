@@ -2,7 +2,7 @@ import { useState } from "react";
 import React from "react";
 
 const ShoppingCartContext = React.createContext({
-  shoppingCartList: [{}],
+  shoppingCartList: [],
   addToCart: () => {},
   removeFromCart: () => {},
 });

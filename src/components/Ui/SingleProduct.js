@@ -9,10 +9,10 @@ const SingleProduct = (props) => {
     <section className={classes.container}>
       <div className={classes.card}>
         <img src={img} alt={title} />
-
-        <h3>{title}</h3>
-        <span>${price}</span>
-
+        <div className={classes.describtion}>
+          <h3>{title}</h3>
+          <span>${price}</span>
+        </div>
         <button onClick={ctx.addToCart}>Add to cart</button>
       </div>
     </section>

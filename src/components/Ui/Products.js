@@ -1,4 +1,5 @@
 import { useEffect, useState } from "react";
+import Card from "./Card";
 import SingleProduct from "./SingleProduct";
 
 const Product = () => {
@@ -12,17 +13,22 @@ const Product = () => {
       });
   }, []);
 
-  return productsArr.map((prod) => (
-    <SingleProduct
-      key={prod.id}
-      id={prod.id}
-      img={prod.image}
-      // description={prod.description}
-      price={prod.price}
-      title={prod.title}
-      // category={prod.category}
-    />
-  ));
+  return (
+    <Card>
+      {productsArr.map((prod) => (
+        <SingleProduct
+          key={prod.id}
+          id={prod.id}
+          img={prod.image}
+          // description={prod.description}
+          price={prod.price}
+          title={prod.title}
+          // category={prod.category}
+        />
+      ))}
+      ;
+    </Card>
+  );
 };
 
 export default Product;
