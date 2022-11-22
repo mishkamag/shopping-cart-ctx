@@ -10,7 +10,7 @@ const ShoppingCartContext = React.createContext({
 export const ShoppingCartProvider = (props) => {
   const [shoppingCartList, setShoppingCartList] = useState([]);
 
-  function addToCart(prod) {
+  const addToCart = (prod) => {
     setShoppingCartList((prevProd) => {
       const existingId = prevProd.find(
         (singleProd) => singleProd.id === prod.id
@@ -24,9 +24,7 @@ export const ShoppingCartProvider = (props) => {
         return;
       }
     });
-  }
-
-  console.log(shoppingCartList);
+  };
 
   const removeFromCart = (prod) => {
     setShoppingCartList((prevProds) => {

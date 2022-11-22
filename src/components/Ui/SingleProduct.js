@@ -10,16 +10,14 @@ const SingleProduct = (props) => {
   let AddOrRemove = managing === "Adding" ? "ADD TO CART" : "REMOVE FROM CART";
 
   return (
-    <section className={classes.container}>
+    <div className={classes.home}>
       <div className={classes.card}>
-        <img src={img} alt={title} />
-        <div className={classes.describtion}>
-          <h3>{title}</h3>
-          <span>${price}</span>
-        </div>
+        <img src={img} alt="" />
+        <p>{title}</p>
+        <h3>$. {price}</h3>
         <button onClick={manageCartHandler}>{AddOrRemove}</button>
       </div>
-    </section>
+    </div>
   );
 };
 
