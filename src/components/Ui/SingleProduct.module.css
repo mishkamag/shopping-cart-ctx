@@ -35,3 +35,8 @@ p {
   letter-spacing: 2px;
   margin: 15px 0;
 }
+
+.card button:hover {
+  background-color: #002ead;
+  transition: 0.7s;
+}
