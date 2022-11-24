@@ -38,7 +38,8 @@ const SortProducts = ({ productsArr }) => {
     <div>
       <select
         name="price"
-        onChange={selectChangeHandler}
+        id="price"
+        onClick={selectChangeHandler}
         defaultValue={selectValue}
       >
         {/* <option value="" disabled selected>
