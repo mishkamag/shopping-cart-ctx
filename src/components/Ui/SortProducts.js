@@ -1,7 +1,10 @@
-import { useState } from "react";
+import { useContext, useState } from "react";
+import ShoppingCartContext from "../../store/ShoppingCartCtx";
+
 import SingleProduct from "./SingleProduct";
 
 const SortProducts = ({ productsArr }) => {
+  const ctx = useContext(ShoppingCartContext);
   const [selectValue, setSelectValue] = useState("");
 
   const lowestFirst = [...productsArr]
@@ -10,9 +13,11 @@ const SortProducts = ({ productsArr }) => {
       <SingleProduct
         id={prod.id}
         key={prod.key}
-        img={prod.img}
+        img={prod.image}
         title={prod.title}
         price={prod.price}
+        manageCart={ctx.addToCart}
+        managing="Adding"
       />
     ));
 
@@ -23,9 +28,11 @@ const SortProducts = ({ productsArr }) => {
         <SingleProduct
           id={prod2.id}
           key={prod2.key}
-          img={prod2.img}
+          img={prod2.image}
           title={prod2.title}
           price={prod2.price}
+          manageCart={ctx.addToCart}
+          managing="Adding"
         />
       </div>
     ));
@@ -39,15 +46,16 @@ const SortProducts = ({ productsArr }) => {
       <select
         name="price"
         id="price"
-        onClick={selectChangeHandler}
+        onChange={selectChangeHandler}
         defaultValue={selectValue}
       >
-        {/* <option value="" disabled selected>
-          Filter Products
-        </option> */}
-        <option value={lowestFirst}>Price (lowest first)</option>
-        <option value={highestFirst}>Price (highest first)</option>
+        <option value="" disabled selected>
+          Filter By Price
+        </option>
+        <option>Price (lowest first)</option>
+        <option>Price (highest first)</option>
       </select>
+      {selectValue === "Price (lowest first)" ? lowestFirst : highestFirst}
     </div>
   );
 };
