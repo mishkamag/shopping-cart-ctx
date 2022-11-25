@@ -20,5 +20,9 @@
 }
 
 .nav > li:hover {
-  color: turquoise;
+  color: #4a77f4;
+}
+
+.home {
+  font-size: 1.2rem;
 }
