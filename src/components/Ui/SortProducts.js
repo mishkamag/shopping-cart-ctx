@@ -1,6 +1,7 @@
 import { useContext, useState } from "react";
 import ShoppingCartContext from "../../store/ShoppingCartCtx";
 import Card from "./Card";
+import classes from "./SortProducts.module.css";
 
 import SingleProduct from "./SingleProduct";
 
@@ -23,6 +24,7 @@ const SortProducts = ({ productsArr }) => {
       <select
         name="price"
         id="price"
+        className={classes.select}
         onChange={selectChangeHandler}
         defaultValue={"DEFAULT"}
       >
