@@ -6,7 +6,6 @@ import EmptyCart from "./EmptyCart";
 
 const Cart = () => {
   const ctx = useContext(ShoppingCartContext);
-  console.log(ctx.shoppingCartList);
 
   return (
     <Card>
