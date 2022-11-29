@@ -1,28 +1,24 @@
-.header {
-  display: block;
-  text-align: center;
-  font-size: 30px;
-  margin: 10px 0;
-}
-
 .nav {
   display: flex;
   list-style: none;
-  justify-content: space-around;
+  justify-content: space-between;
   align-items: center;
   background-color: black;
-  height: 80px;
-  margin-top: 0;
+  color: #fff;
+  gap: 2rem;
+  padding: 1rem 3rem;
+}
+
+.nav ul {
+  list-style: none;
+  display: flex;
+  gap: 2rem;
 }
 
 .nav > li {
-  color: white;
+  color: inherit;
 }
 
 .nav > li:hover {
   color: #4a77f4;
-}
-
-.home {
-  font-size: 1.2rem;
 }

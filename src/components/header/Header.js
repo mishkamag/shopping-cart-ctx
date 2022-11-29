@@ -9,9 +9,11 @@ const Header = () => {
 
   const list = ctx.shoppingCartList.length;
   return (
-    <div>
-      <span className={classes.header}>Great Shop</span>
-      <ul className={classes.nav}>
+    <nav className={classes.nav}>
+      <Link className={classes.brand} to="/">
+        Mk Shop
+      </Link>
+      <ul>
         <li>
           <Link className={classes.home} to="/">
             Home
@@ -23,8 +25,14 @@ const Header = () => {
             {list === 0 ? null : list}
           </Link>
         </li>
+        <li>
+          <Link to="/signIn">Sign In</Link>
+        </li>
+        <li>
+          <Link to="/signUp">Sign Out</Link>
+        </li>
       </ul>
-    </div>
+    </nav>
   );
 };
 
