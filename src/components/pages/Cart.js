@@ -2,6 +2,7 @@ import { useContext } from "react";
 import ShoppingCartContext from "../../store/ShoppingCartCtx";
 import Card from "../Ui/Card";
 import SingleProduct from "../Ui/SingleProduct";
+import EmptyCart from "./EmptyCart";
 
 const Cart = () => {
   const ctx = useContext(ShoppingCartContext);
@@ -22,7 +23,7 @@ const Cart = () => {
           />
         ))
       ) : (
-        <h1>No Item in Cart</h1>
+        <EmptyCart />
       )}
     </Card>
   );
