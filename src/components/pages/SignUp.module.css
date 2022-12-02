@@ -21,15 +21,6 @@
   background-attachment: fixed;
 }
 
-.site {
-  padding: 0.8rem;
-  display: flex;
-  align-items: center;
-  justify-content: center;
-  background-color: #373b69;
-  font-size: 1.5rem;
-}
-
 .name,
 .date,
 .email,
