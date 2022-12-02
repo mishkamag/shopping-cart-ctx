@@ -3,7 +3,7 @@
   list-style: none;
   justify-content: space-between;
   align-items: center;
-  background-color: black;
+  background-color: #373b69;
   color: #fff;
   gap: 2rem;
   padding: 1rem 3rem;
@@ -12,7 +12,8 @@
 .nav ul {
   list-style: none;
   display: flex;
-  gap: 2rem;
+  justify-content: flex-start;
+  gap: 6rem;
 }
 
 .nav > li {

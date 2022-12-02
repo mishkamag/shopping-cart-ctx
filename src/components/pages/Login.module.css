@@ -1,24 +1,26 @@
+.container {
+  background-image: url(https://media.istockphoto.com/id/1206800961/photo/online-shopping-and-payment-man-using-tablet-with-shopping-cart-icon-digital-marketing.jpg?s=612x612&w=0&k=20&c=qG_9JB9ll4P5to97_HVxzMqhhzF0Gi1nWM_hNeiotbk=);
+  position: absolute;
+  width: 100vw;
+  height: 100vh;
+  background-size: cover;
+  background-position: center;
+  overflow: hidden;
+  background-attachment: fixed;
+}
+
 .login {
   margin: 3.5rem auto;
   width: 95%;
   max-width: 25rem;
   border-radius: 6px;
   background-color: #373b69;
+
   box-shadow: 0 1px 4px rgba(0, 0, 0, 0.2);
   padding: 1rem;
   text-align: center;
   color: white;
   position: relative;
-}
-
-.img {
-  position: absolute;
-  width: 100vw;
-  height: 91vh;
-  background-size: cover;
-  background-position: center;
-  overflow: hidden;
-  background-attachment: fixed;
 }
 
 .name,
