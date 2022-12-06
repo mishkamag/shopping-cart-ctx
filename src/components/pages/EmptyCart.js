@@ -7,7 +7,7 @@ const EmptyCart = () => {
     <div className={classes.container}>
       <h2>
         Your cart is empty{" "}
-        <Link className={classes.link} to="/home">
+        <Link className={classes.link} to="/">
           Go Back For Happy Shopping )
         </Link>
       </h2>

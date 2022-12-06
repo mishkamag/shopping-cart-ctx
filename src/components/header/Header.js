@@ -10,12 +10,12 @@ const Header = () => {
   const list = ctx.shoppingCartList.length;
   return (
     <nav className={classes.nav}>
-      <Link className={classes.brand} to="/home">
+      <Link className={classes.brand} to="/">
         Mk Shop
       </Link>
       <ul>
         <li>
-          <Link className={classes.home} to="/home">
+          <Link className={classes.home} to="/">
             Home
           </Link>
         </li>
@@ -24,6 +24,9 @@ const Header = () => {
             <FiShoppingCart size={28} />
             {list === 0 ? null : list}
           </Link>
+        </li>
+        <li>
+          <Link to="/signup">Sign Up</Link>
         </li>
       </ul>
     </nav>

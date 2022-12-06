@@ -1,9 +1,9 @@
 import { Fragment } from "react";
 import { useNavigate } from "react-router-dom";
-import classes from "./Login.module.css";
+import classes from "./SignUp.module.css";
 import { useFormik } from "formik";
 
-const Login = () => {
+const SignUp = () => {
   const navigate = useNavigate();
 
   const initialValues = {
@@ -15,7 +15,7 @@ const Login = () => {
   };
 
   const onSubmit = (values) => {
-    navigate("/home");
+    navigate("/");
   };
 
   const validate = (values) => {
@@ -162,4 +162,4 @@ const Login = () => {
   );
 };
 
-export default Login;
+export default SignUp;
