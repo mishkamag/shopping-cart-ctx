@@ -6,7 +6,7 @@
   background-size: cover;
   background-position: center;
   overflow: hidden;
-  background-attachment: fixed;
+  align-items: center;
 }
 
 .login {
@@ -24,15 +24,13 @@
 }
 
 .name,
-.date,
 .email,
 .button {
   margin-top: 1rem;
 }
 
 .name label,
-.email label,
-.date label {
+.email label {
   display: block;
   color: white;
   font-weight: bold;
@@ -40,8 +38,7 @@
 }
 
 .name input,
-.email input,
-.date input {
+.email input {
   font: inherit;
   background-color: white;
   color: #373b69;
@@ -69,10 +66,10 @@
 
 .error {
   color: red;
-  margin-top: 0.7rem;
-  font-style: italic;
+  margin-top: 0.4rem;
 }
 
-.shakeError {
-  font-size: large;
+.udenerline {
+  text-decoration: underline;
+  padding-left: 0.6rem;
 }
