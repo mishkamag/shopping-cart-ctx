@@ -4,7 +4,7 @@ import "./index.css";
 import App from "./App";
 import { BrowserRouter } from "react-router-dom";
 import { ShoppingCartProvider } from "./store/ShoppingCartCtx";
-import { AuthContextProvider } from "./store/AuthContext";
+import { AuthContextProvider } from "./store/Auth-context";
 
 const root = ReactDOM.createRoot(document.getElementById("root"));
 root.render(

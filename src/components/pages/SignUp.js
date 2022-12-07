@@ -1,10 +1,13 @@
-import { Fragment } from "react";
-import { Link, useNavigate } from "react-router-dom";
+import { Fragment, useContext } from "react";
+import { Link } from "react-router-dom";
 import classes from "./SignUp.module.css";
 import { useFormik } from "formik";
+import AuthContext from "../../store/Auth-context";
 
 const SignUp = () => {
-  const navigate = useNavigate();
+  const ctx = useContext(AuthContext);
+
+  // const navigate = useNavigate();
 
   const initialValues = {
     name: "",
@@ -14,7 +17,12 @@ const SignUp = () => {
   };
 
   const onSubmit = (values) => {
-    navigate("/");
+    ctx.createUserHandler(
+      values.name,
+      values.email,
+      values.password,
+      values.re_password
+    );
   };
 
   const validate = (values) => {

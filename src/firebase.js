@@ -6,12 +6,12 @@ import { getAuth } from "firebase/auth";
 
 // Your web app's Firebase configuration
 const firebaseConfig = {
-  apiKey: "AIzaSyAQb1szQy4V0akCl-MWBVTOksV355sfnf0",
-  authDomain: "shopping-room-ffc53.firebaseapp.com",
-  projectId: "shopping-room-ffc53",
-  storageBucket: "shopping-room-ffc53.appspot.com",
-  messagingSenderId: "101231860611",
-  appId: "1:101231860611:web:d49635cb33d5593cab34b6",
+  apiKey: "AIzaSyCsqTtA3xzDiekxxnPz9rYNSc7ti3OrucU",
+  authDomain: "signup-carts.firebaseapp.com",
+  projectId: "signup-carts",
+  storageBucket: "signup-carts.appspot.com",
+  messagingSenderId: "386690989689",
+  appId: "1:386690989689:web:c34789be90eba40d02dea8",
 };
 
 // Initialize Firebase

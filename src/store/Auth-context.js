@@ -7,20 +7,25 @@ import {
 } from "firebase/auth";
 import { auth } from "../firebase";
 
-const UserContext = createContext();
+const AuthContext = createContext({
+  user: {},
+  createUserHandler: () => {},
+  signInHandler: () => {},
+  logoutHandler: () => {},
+});
 
 export const AuthContextProvider = (props) => {
   const [user, setUser] = useState({});
 
-  const createUser = (email, password, repassword) => {
-    return createUserWithEmailAndPassword(auth, email, password, repassword);
+  const createUserHandler = async (name, email, password, repassword) => {
+    await createUserWithEmailAndPassword(auth, email, password);
   };
 
-  const signIn = (email, password) => {
+  const signInHandler = (email, password) => {
     return signInWithEmailAndPassword(auth, email, password);
   };
 
-  const logout = () => {
+  const logoutHandler = () => {
     return signOut(auth);
   };
 
@@ -35,8 +40,12 @@ export const AuthContextProvider = (props) => {
   }, []);
 
   return (
-    <UserContext.Provider value={{ createUser, user, logout, signIn }}>
+    <AuthContext.Provider
+      value={{ user, createUserHandler, signInHandler, logoutHandler }}
+    >
       {props.children}
-    </UserContext.Provider>
+    </AuthContext.Provider>
   );
 };
+
+export default AuthContext;
