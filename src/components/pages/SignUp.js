@@ -9,7 +9,6 @@ const SignUp = () => {
   const initialValues = {
     name: "",
     email: "",
-    date: "",
     password: "",
     re_password: "",
   };
@@ -54,11 +53,6 @@ const SignUp = () => {
       errors.re_password = "Passwords aren't same";
     }
 
-    if (!values.date) {
-      errors.date = "Required";
-    } else if (calcAge < 18) {
-      errors.date = "you must be 18+";
-    }
     return errors;
   };
 
@@ -68,9 +62,6 @@ const SignUp = () => {
     validate,
   });
 
-  const inputDate = new Date(formik.values.date);
-  const realAge = new Date() - inputDate;
-  const calcAge = Math.floor(realAge / (1000 * 60 * 60 * 24 * 365.25));
 
   return (
     <Fragment>
@@ -134,21 +125,6 @@ const SignUp = () => {
               />
               {formik.touched.re_password && formik.errors.re_password ? (
                 <div className={classes.error}>{formik.errors.re_password}</div>
-              ) : null}
-            </div>
-
-            <div className={classes.date}>
-              <label thmlfor="date">Birth Date </label>
-              <input
-                type="date"
-                id="date"
-                name="date"
-                onChange={formik.handleChange}
-                onBlur={formik.handleBlur}
-                value={formik.values.date}
-              />
-              {formik.touched.date && formik.errors.date ? (
-                <div className={classes.error}>{formik.errors.date}</div>
               ) : null}
             </div>
 
