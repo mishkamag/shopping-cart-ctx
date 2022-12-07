@@ -1,5 +1,5 @@
 import { Fragment } from "react";
-import { useNavigate } from "react-router-dom";
+import { Link, useNavigate } from "react-router-dom";
 import classes from "./SignUp.module.css";
 import { useFormik } from "formik";
 
@@ -86,6 +86,12 @@ const SignIn = () => {
             <button type="submit" className={classes.button}>
               Sign In
             </button>
+            <h4>
+              Don't have Account? Please
+              <Link className={classes.udenerline} to="/signup">
+                Sign Up
+              </Link>
+            </h4>
           </form>
         </section>
       </div>

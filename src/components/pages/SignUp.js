@@ -1,5 +1,5 @@
 import { Fragment } from "react";
-import { useNavigate } from "react-router-dom";
+import { Link, useNavigate } from "react-router-dom";
 import classes from "./SignUp.module.css";
 import { useFormik } from "formik";
 
@@ -61,7 +61,6 @@ const SignUp = () => {
     onSubmit,
     validate,
   });
-
 
   return (
     <Fragment>
@@ -131,6 +130,12 @@ const SignUp = () => {
             <button type="submit" className={classes.button}>
               Register
             </button>
+            <h4>
+              You have Account? Please
+              <Link to="/signin" className={classes.udenerline}>
+                Sign In
+              </Link>
+            </h4>
           </form>
         </section>
       </div>
