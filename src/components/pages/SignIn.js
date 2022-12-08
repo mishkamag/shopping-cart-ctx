@@ -1,18 +1,25 @@
-import { Fragment } from "react";
+import { Fragment, useContext } from "react";
 import { Link, useNavigate } from "react-router-dom";
 import classes from "./SignUp.module.css";
 import { useFormik } from "formik";
+import AuthContext from "../../store/Auth-context";
 
 const SignIn = () => {
   const navigate = useNavigate();
+  const ctx = useContext(AuthContext);
 
   const initialValues = {
     email: "",
     password: "",
   };
 
-  const onSubmit = (values) => {
-    navigate("/");
+  const onSubmit = async (values) => {
+    try {
+      await ctx.signInHandler(values.email, values.password);
+      navigate("/");
+    } catch (e) {
+      alert(e.message);
+    }
   };
 
   const validate = (values) => {
