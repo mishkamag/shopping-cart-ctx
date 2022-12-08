@@ -8,6 +8,7 @@ const Header = () => {
   const ctx = useContext(ShoppingCartContext);
 
   const list = ctx.shoppingCartList.length;
+
   return (
     <nav className={classes.nav}>
       <Link className={classes.brand} to="/">

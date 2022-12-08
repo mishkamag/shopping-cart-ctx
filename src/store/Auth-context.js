@@ -15,7 +15,7 @@ const AuthContext = createContext({
 });
 
 export const AuthContextProvider = (props) => {
-  const [user, setUser] = useState({});
+  const [user, setUser] = useState(null);
 
   const createUserHandler = async (name, email, password, repassword) => {
     await createUserWithEmailAndPassword(auth, email, password);
