@@ -16,6 +16,7 @@ const SignIn = () => {
   const onSubmit = async (values) => {
     try {
       await ctx.signInHandler(values.email, values.password);
+      alert("You Sign in successfully");
       navigate("/");
     } catch (e) {
       alert(e.message);

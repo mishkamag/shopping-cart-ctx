@@ -21,8 +21,8 @@ export const AuthContextProvider = (props) => {
     await createUserWithEmailAndPassword(auth, email, password);
   };
 
-  const signInHandler = (email, password) => {
-    return signInWithEmailAndPassword(auth, email, password);
+  const signInHandler = async (email, password) => {
+    await signInWithEmailAndPassword(auth, email, password);
   };
 
   const logoutHandler = () => {

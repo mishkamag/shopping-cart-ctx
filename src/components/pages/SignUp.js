@@ -16,8 +16,8 @@ const SignUp = () => {
     re_password: "",
   };
 
-  const onSubmit = async (values) => {
-    await ctx.createUserHandler(
+  const onSubmit = (values) => {
+    ctx.createUserHandler(
       values.name,
       values.email,
       values.password,
