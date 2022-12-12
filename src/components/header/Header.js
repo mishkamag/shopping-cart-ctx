@@ -13,14 +13,12 @@ const Header = () => {
 
   return (
     <nav className={classes.nav}>
-      <Link className={classes.brand} to="/">
+      <Link to="/" className={classes.brand}>
         Mk Shop
       </Link>
-      <ul>
+      <ul className={classes.navLinks}>
         <li>
-          <Link className={classes.home} to="/">
-            Home
-          </Link>
+          <Link to="/">Home</Link>
         </li>
         <li>
           <Link to="/cart">
@@ -28,7 +26,7 @@ const Header = () => {
             {list === 0 ? null : list}
           </Link>
         </li>
-        <li>
+        <li className={classes.signup}>
           <Link to="/signup">Sign Up</Link>
         </li>
         <li>

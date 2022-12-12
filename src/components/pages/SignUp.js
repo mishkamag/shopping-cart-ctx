@@ -23,7 +23,7 @@ const SignUp = () => {
       values.password,
       values.re_password
     );
-    alert("succsefull");
+    alert("You Registed successfully");
     navigate("/signin");
   };
 

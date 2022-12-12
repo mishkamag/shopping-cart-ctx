@@ -5,27 +5,38 @@
   align-items: center;
   background-color: #373b69;
   color: #fff;
-  gap: 2rem;
-  padding: 1rem 3rem;
+  padding: 0.5rem 2rem;
 }
 
-.nav ul {
-  list-style: none;
+.navLinks {
   display: flex;
-  justify-content: flex-start;
-  gap: 2rem;
+  justify-content: flex-end;
   align-items: center;
 }
 
-.nav > li {
+.navLinks > li {
   color: inherit;
+  font-size: 1.1rem;
+  margin: 0 0.3rem;
+  padding: 0.5rem;
+  list-style: none;
 }
 
 .nav > li:hover {
   color: #4a77f4;
 }
 
-.home,
-.brand {
-  font-size: larger;
+.signup {
+  border: 1px solid yellow;
+  border-radius: 0.4rem;
+}
+
+.mobileMenu {
+  display: none;
+}
+
+@media screen and (max-width: 780px) {
+  .brand {
+    display: none;
+  }
 }
