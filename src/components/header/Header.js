@@ -4,6 +4,7 @@ import { useContext } from "react";
 import ShoppingCartContext from "../../store/ShoppingCartCtx";
 import { FiShoppingCart } from "react-icons/fi";
 import AuthContext from "../../store/Auth-context";
+import { FaSignOutAlt } from "react-icons/fa";
 
 const Header = () => {
   const ctx = useContext(ShoppingCartContext);
@@ -16,6 +17,7 @@ const Header = () => {
       <Link to="/" className={classes.brand}>
         Mk Shop
       </Link>
+
       <ul className={classes.navLinks}>
         <li>
           <Link to="/">Home</Link>
@@ -33,9 +35,12 @@ const Header = () => {
           <Link to="/signin">Sign In</Link>
         </li>
         <li>
-          <Link onClick={authCtx.logoutHandler} to="#">
-            Sign Out
-          </Link>
+          <FaSignOutAlt
+            onClick={authCtx.logoutHandler}
+            to="#"
+            size={28}
+            cursor="pointer"
+          />
         </li>
       </ul>
     </nav>

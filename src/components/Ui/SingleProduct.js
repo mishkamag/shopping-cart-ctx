@@ -1,17 +1,13 @@
 import { useContext } from "react";
-import { useNavigate } from "react-router-dom";
 import AuthContext from "../../store/Auth-context";
 import classes from "./SingleProduct.module.css";
 
 const SingleProduct = (props) => {
   const ctx = useContext(AuthContext);
   const { img, title, price, managing, manageCart } = props;
-  const navigate = useNavigate();
 
   function manageCartHandler() {
-    ctx.user
-      ? manageCart(props)
-      : alert("Sign up first") && navigate("/signup");
+    ctx.user ? manageCart(props) : alert("Sign up first");
   }
 
   let AddOrRemove = managing === "Adding" ? "ADD TO CART" : "REMOVE FROM CART";
